@@ -53,7 +53,7 @@ $.fn.pjax = function( container, options ) {
       clickedElement: $(this)
     }
 
-    $.pjax($.extend({}, defaults, options))
+    $.pjax($.extend(defaults, options))
 
     event.preventDefault()
   })
@@ -161,7 +161,9 @@ $.pjax = function( options ) {
     }
   }
 
-  options = $.extend(defaults, options)
+  // TODO: Prototypal inheritance is perfect for a default options pattern.
+  // For not just extending and extending.
+  options = $.extend($.extend({}, defaults), options)
 
   if ( $.isFunction(options.url) ) {
     options.url = options.url()
