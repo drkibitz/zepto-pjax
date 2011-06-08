@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title><?php echo empty($title) ? '' : "$title - "; ?>pjax</title>
+    <script src="https://github.com/madrobby/zepto/raw/master/src/polyfill.js"></script>
     <script src="https://github.com/madrobby/zepto/raw/master/src/zepto.js"></script>
     <script src="https://github.com/madrobby/zepto/raw/master/src/event.js"></script>
     <script src="https://github.com/madrobby/zepto/raw/master/src/ajax.js"></script>
-    <script src="./zepto.cookie.js"></script>
-    <script src="./zepto.pjax.js"></script>
+    <script src="https://github.com/jimisaacs/zepto-pjax/raw/master/zepto.cookie.js"></script>
+    <script src="https://github.com/jimisaacs/zepto-pjax/raw/master/zepto.pjax.js"></script>
     <script type="text/javascript">
         $(function() {
             var checkbox = $('input[type="checkbox"]');
